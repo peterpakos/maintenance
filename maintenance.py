@@ -8,7 +8,7 @@ from SimpleHTTPServer import SimpleHTTPRequestHandler
 if sys.argv[1:]:
     port = int(sys.argv[1])
 else:
-    port = 8000
+    port = 8080
 
 HandlerClass = SimpleHTTPRequestHandler
 ServerClass = BaseHTTPServer.HTTPServer
@@ -20,7 +20,7 @@ HandlerClass.protocol_version = Protocol
 httpd = ServerClass(server_address, HandlerClass)
 sa = httpd.socket.getsockname()
 
-print('Serving Maintenance HTTP server on %s:%s' %(sa[0], sa[1]))
+print('Serving Maintenance HTTP server on %s:%s' % (sa[0], sa[1]))
 
 try:
     httpd.serve_forever()
