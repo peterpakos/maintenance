@@ -12,7 +12,7 @@ from threading import Thread
 
 
 class Main(object):
-    __version = '1.0'
+    __version = '16.3.10'
     __name = path.basename(argv[0])
     __cwd = path.dirname(path.abspath(argv[0]))
     __ports = [8080]
